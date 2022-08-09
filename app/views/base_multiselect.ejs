@@ -10,13 +10,8 @@
 <!-- END HERE  -->
 
     <Script>
-        let basesearchar = new Array()
-        let filterparam = {};
-        let basesearchobj = {}
-        let base = {}
-        let ajaxbase = {
-            postauth: { headers: 'sampleset' }
-        }
+        
+       
 
         // /*basefunction can be anything */ 
         // me.remotefunc = 'basefunction'
@@ -36,6 +31,7 @@
                     resolve({ rows: [{ gender: "m" }, { gender: "f" }] })
                 })
             }
+            /*multiselect Init*/
             multiselect.searchbarautocomplete(a)
         }
 
@@ -48,6 +44,7 @@
                     resolve({ rows: [{ first_name: "matt" }, { first_name: "baker" }] })
                 })
             }
+            /*multiselect Init*/
             multiselect.searchbarautocomplete(a)
         }
 

@@ -5,6 +5,10 @@
 // }
 /*multiselect filter params */
 let me = {}
+let basesearchar = new Array()
+        let filterparam = {};
+        let basesearchobj = {}
+        let base = {}
 let multiselect = {
    basemultiselect: function(remotefunc) {
     
