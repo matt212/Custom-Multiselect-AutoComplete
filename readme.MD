@@ -6,6 +6,7 @@
 
 - `include JS` [mutliselect-JS-CDN](https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.js)
 - `include CSS` [mutliselect-CSS-CDN](https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.css)
+-  `Example:- Jsfiddle ` [Multiselect Filter JSfiddle](https://jsfiddle.net/bilbobaggins/bvu2wanq/)
 
 #### initialize ###
  ```
