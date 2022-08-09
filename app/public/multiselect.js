@@ -16,6 +16,7 @@ let multiselect = {
     $(`[id="${a.id}"]`).attr("data-multipleselect-autocomplete-key",a.fieldname)
     $(`[id="${a.id}"]`).attr("data-multipleselect-autocomplete",a.fieldname)
     $(`[id="${a.id}"]`).attr("oninput",`${a.id}(this)`)
+    me.remotefunc = a.id
   },
    basemultiselect: function(remotefunc) {
     
