@@ -10,9 +10,13 @@
 <!-- END HERE  -->
 
     <Script>
-        
-       
+        $( document ).ready(function() {
+            /*multiselect ctrl Init*/
+            multiselect.baseInit({id:'cltrl_filter_gender',fieldname:'gender'})
+            multiselect.baseInit({id:'cltrl_filter_firstname',fieldname:'first_name'})
 
+        })
+        
         // /*basefunction can be anything */ 
         // me.remotefunc = 'basefunction'
         // /*server api call here*/
@@ -25,13 +29,14 @@
         let cltrl_filter_gender = function (a) {
             /*me.remotefunc is important since it is used in mutliselect call and rendering*/
             me.remotefunc = 'cltrl_filter_gender'
+            
             me.remotefunc = function (base) {
                 return new Promise(function (resolve, reject) {
                     /*response in this format*/
                     resolve({ rows: [{ gender: "m" }, { gender: "f" }] })
                 })
             }
-            /*multiselect Init*/
+            /*multiselect Search Init*/
             multiselect.searchbarautocomplete(a)
         }
 
@@ -44,7 +49,7 @@
                     resolve({ rows: [{ first_name: "matt" }, { first_name: "baker" }] })
                 })
             }
-            /*multiselect Init*/
+            /*multiselect Search Init*/
             multiselect.searchbarautocomplete(a)
         }
 
@@ -59,9 +64,7 @@
 
     <h5>Type `m` or `f` </h5>
 
-    <input type="text" style="width:45%;" class="form-control" data-multipleselect-autocomplete-key="gender"
-        data-multipleselect-autocomplete="gender" id="cltrl_filter_gender" oninput="cltrl_filter_gender(this)"
-        placeholder="gender">
+    <input type="text" style="width:45%;" class="form-control"  id="cltrl_filter_gender" >
 
     <input type="text" style="width:45%;" class="form-control" data-multipleselect-autocomplete-key="first_name"
         data-multipleselect-autocomplete="first_name" id="cltrl_filter_first_name"

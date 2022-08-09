@@ -10,6 +10,13 @@ let basesearchar = new Array()
         let basesearchobj = {}
         let base = {}
 let multiselect = {
+  baseInit:function(a)
+  {
+    
+    $(`[id="${a.id}"]`).attr("data-multipleselect-autocomplete-key",a.fieldname)
+    $(`[id="${a.id}"]`).attr("data-multipleselect-autocomplete",a.fieldname)
+    $(`[id="${a.id}"]`).attr("oninput",`${a.id}(this)`)
+  },
    basemultiselect: function(remotefunc) {
     
     
