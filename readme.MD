@@ -10,7 +10,8 @@
 
 ### multiselect plugin usage ###
 
-- `include JS  https://raw.githubusercontent.com/matt212/Custom-Multiselect/master/app/public/multiselect.js`
+- `include JS  
+[mutliselect-CDN](https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.js) `
 - `include CSS https://raw.githubusercontent.com/matt212/Custom-Multiselect/master/app/public/multiselect.css`
 
 #### initialize ###
