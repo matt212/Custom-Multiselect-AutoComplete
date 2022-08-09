@@ -28,6 +28,7 @@
         //     })
         // }
         let cltrl_filter_gender = function (a) {
+            /*me.remotefunc is important since it is used in mutliselect call and rendering*/
             me.remotefunc = 'cltrl_filter_gender'
             me.remotefunc = function (base) {
                 return new Promise(function (resolve, reject) {
@@ -39,6 +40,7 @@
         }
 
         let cltrl_filter_first_name = function (a) {
+            /*me.remotefunc is important since it is used in mutliselect call and rendering*/
             me.remotefunc = 'cltrl_filter_first_name'
             me.remotefunc = function (base) {
                 return new Promise(function (resolve, reject) {
