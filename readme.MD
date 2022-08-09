@@ -1,11 +1,27 @@
 #### pre-Requisites ###
 -  `jquery (any version would suffice) preferred JQUERY 3.6.0 `
 -  `bootstrap.min.CSS (any version would suffice) preferred Bootstrap v3.3.7`
+```
+<!--pre-Requisites -->
+<!-- jQUERY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+<!-- Bootstrap  CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--pre-Requisites end Here -->
+```
 
 ### multiselect plugin usage ###
 
-- `include JS` [mutliselect-JS-CDN](https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.js)
-- `include CSS` [mutliselect-CSS-CDN](https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.css)
+```
+<!-- Multi Select AutoComplete CSS and  JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.css">
+<script src="https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.js"></script>
+```
+
 -  `Example:- Jsfiddle ` [Multiselect Filter JSfiddle](https://jsfiddle.net/bilbobaggins/bvu2wanq/)
 
 #### initialize ###
