@@ -4,19 +4,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </script>
 
-<!-- Custom Multiselect JS and CSS -->
+    <!-- Custom Multiselect JS and CSS -->
     <link rel="stylesheet" href="../../multiselect.css" />
     <script src="../../multiSelect.js"></script>
-<!-- END HERE  -->
+    <!-- END HERE  -->
 
     <Script>
-        $( document ).ready(function() {
+        $(document).ready(function () {
             /*multiselect ctrl Init*/
-            multiselect.baseInit({id:'cltrl_filter_gender',fieldname:'gender'})
-            multiselect.baseInit({id:'cltrl_filter_first_name',fieldname:'first_name'})
+            multiselect.baseInit({ id: 'cltrl_filter_gender', fieldname: 'gender' })
+            multiselect.baseInit({ id: 'cltrl_filter_first_name', fieldname: 'first_name' })
 
         })
-        
+
         // /*basefunction can be anything */ 
         // me.remotefunc = 'basefunction'
         // /*server api call here*/
@@ -26,28 +26,27 @@
         //         resolve({ rows: [{ gender: "m" }, { gender: "f" }] })
         //     })
         // }
-        let cltrl_filter_gender = function(a) {
-    /*me.remotefunc is important since it is used in mutliselect call and rendering*/
-
-    me.remotefunc = function(base) {
-        return new Promise(function(resolve, reject) {
-            /*response in this format*/
-            resolve({
-                rows: [{
-                    gender: "m"
-                }, {
-                    gender: "f"
-                }]
-            })
-        })
-    }
-    /*multiselect Search Init*/
-    multiselect.searchbarautocomplete(a)
-}
+        let cltrl_filter_gender = function (a) {
+            /*me.remotefunc is important since it is used in mutliselect call and rendering*/
+            me.remotefunc = function (base) {
+                return new Promise(function (resolve, reject) {
+                    /*response in this format*/
+                    resolve({
+                        rows: [{
+                            gender: "m"
+                        }, {
+                            gender: "f"
+                        }]
+                    })
+                })
+            }
+            /*multiselect Search Init*/
+            multiselect.searchbarautocomplete(a)
+        }
 
         let cltrl_filter_first_name = function (a) {
             /*me.remotefunc is important since it is used in mutliselect call and rendering*/
-            
+
             me.remotefunc = function (base) {
                 return new Promise(function (resolve, reject) {
                     /*response in this format*/
@@ -69,10 +68,8 @@
 
     <h5>Type `m` or `f` </h5>
 
-    <input type="text" style="width:45%;" class="form-control"  id="cltrl_filter_gender"  placeholder="gender">
+    <input type="text" style="width:45%;" class="form-control" id="cltrl_filter_gender" placeholder="gender">
 
-    <input type="text" style="width:45%;" class="form-control" 
-     id="cltrl_filter_first_name"
-         placeholder="first_name">
+    <input type="text" style="width:45%;" class="form-control" id="cltrl_filter_first_name" placeholder="first_name">
 
 </body>
