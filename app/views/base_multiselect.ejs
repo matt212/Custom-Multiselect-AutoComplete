@@ -3,7 +3,7 @@
         integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </script>
-    
+
 
     <link rel="stylesheet" href="../../multiselect.css" />
     <script src="../../multiSelect.js"></script>
@@ -18,15 +18,38 @@
             postauth: { headers: 'sampleset' }
         }
 
-        /*basefunction can be anything */ 
-        me.remotefunc = 'basefunction'
-        /*server api call here*/
-        me.remotefunc = function (base) {
-            return new Promise(function (resolve, reject) {
-                /*response in this format*/
-                resolve({ rows: [{ gender: "m" }, { gender: "f" }] })
-            })
+        // /*basefunction can be anything */ 
+        // me.remotefunc = 'basefunction'
+        // /*server api call here*/
+        // me.remotefunc = function (base) {
+        //     return new Promise(function (resolve, reject) {
+        //         /*response in this format*/
+        //         resolve({ rows: [{ gender: "m" }, { gender: "f" }] })
+        //     })
+        // }
+        let cltrl_filter_gender = function (a) {
+            me.remotefunc = 'cltrl_filter_gender'
+            me.remotefunc = function (base) {
+                return new Promise(function (resolve, reject) {
+                    /*response in this format*/
+                    resolve({ rows: [{ gender: "m" }, { gender: "f" }] })
+                })
+            }
+            multiselect.searchbarautocomplete(a)
         }
+
+        let cltrl_filter_first_name = function (a) {
+            me.remotefunc = 'cltrl_filter_first_name'
+            me.remotefunc = function (base) {
+                return new Promise(function (resolve, reject) {
+                    /*response in this format*/
+                    resolve({ rows: [{ first_name: "matt" }, { first_name: "baker" }] })
+                })
+            }
+            multiselect.searchbarautocomplete(a)
+        }
+
+
     </Script>
 
     <link rel="stylesheet" href="../../bootstrap.min.css">
@@ -38,6 +61,11 @@
     <h5>Type `m` or `f` </h5>
 
     <input type="text" style="width:45%;" class="form-control" data-multipleselect-autocomplete-key="gender"
-        data-multipleselect-autocomplete="gender" id="cltrl_filter_gender"
-        oninput="multiselect.searchbarautocomplete(this)" placeholder="gender">
+        data-multipleselect-autocomplete="gender" id="cltrl_filter_gender" oninput="cltrl_filter_gender(this)"
+        placeholder="gender">
+
+    <input type="text" style="width:45%;" class="form-control" data-multipleselect-autocomplete-key="first_name"
+        data-multipleselect-autocomplete="first_name" id="cltrl_filter_first_name"
+        oninput="cltrl_filter_first_name(this)" placeholder="first_name">
+
 </body>
