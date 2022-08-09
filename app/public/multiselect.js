@@ -4,7 +4,14 @@
 //   })
 // }
 /*multiselect filter params */
+let me = {}
 let multiselect = {
+   basemultiselect: function(remotefunc) {
+    
+    
+    me.remotefunc = remotefunc
+    
+  },
   searchbarautocomplete: function (baseobj) {
     let internobj = {}
     let internar = []
@@ -44,10 +51,11 @@ let multiselect = {
     filterparam.ispaginate = true
     base.datapayload = filterparam
 
-    var internbasesearchar = basesearchar
+    var internbasesearchar = basesearchar;
 
-    basefunction()
-      .getpaginatesearchtypegroupby(base)
+    me.remotefunc(base)
+    // basefunction()
+    //   .getpaginatesearchtypegroupby(base)
       .then(function (argument) {
         /*    $("#dv_" + baseobj.position + "").html("");
                    $("#dv_" + baseobj.position + "").show();*/

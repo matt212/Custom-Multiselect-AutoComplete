@@ -3,7 +3,7 @@
         integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </script>
-    <script src="../../ajaxUtils.js"></script>
+    
 
     <link rel="stylesheet" href="../../multiselect.css" />
     <script src="../../multiSelect.js"></script>
@@ -17,20 +17,15 @@
         let ajaxbase = {
             postauth: { headers: 'sampleset' }
         }
-        let basefunction = function () {
-            return {
-                getpaginatesearchtypegroupby: function (base) {
-                    ajaxbase.payload = base.datapayload
-                    ajaxbase.url = 'multiselect/api/searchtypegroupby/';
-                    $('.fieldsfilterbar').addClass('loading')
-                    return ajaxutils.basepostmethod(ajaxbase).then(function (argument) {
-                        ajaxbase.response = argument;
-                        $('.fieldsfilterbar').removeClass('loading')
-                        return argument;
-                    })
 
-                }
-            }
+
+        me.remotefunc = 'basefunction'
+        /*server api call here*/
+        me.remotefunc = function (base) {
+            return new Promise(function (resolve, reject) {
+                /*response in this format*/
+                resolve({ rows: [{ gender: "m" }, { gender: "f" }] })
+            })
         }
     </Script>
 
