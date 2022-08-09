@@ -13,7 +13,7 @@
         $( document ).ready(function() {
             /*multiselect ctrl Init*/
             multiselect.baseInit({id:'cltrl_filter_gender',fieldname:'gender'})
-            multiselect.baseInit({id:'cltrl_filter_firstname',fieldname:'first_name'})
+            multiselect.baseInit({id:'cltrl_filter_first_name',fieldname:'first_name'})
 
         })
         
@@ -28,8 +28,7 @@
         // }
         let cltrl_filter_gender = function (a) {
             /*me.remotefunc is important since it is used in mutliselect call and rendering*/
-            
-            
+        
             me.remotefunc = function (base) {
                 return new Promise(function (resolve, reject) {
                     /*response in this format*/
@@ -66,7 +65,8 @@
 
     <input type="text" style="width:45%;" class="form-control"  id="cltrl_filter_gender"  placeholder="gender">
 
-    <input type="text" style="width:45%;" class="form-control"  id="cltrl_filter_first_name"
+    <input type="text" style="width:45%;" class="form-control" 
+     id="cltrl_filter_first_name"
          placeholder="first_name">
 
 </body>
