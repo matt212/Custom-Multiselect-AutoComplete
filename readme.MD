@@ -17,7 +17,7 @@
 ### multiselect plugin usage ###
 
 ```
-<!-- Multi Select AutoComplete CSS and  JS -->
+<!-- Multi Select AutoComplete CSS and  JS (CDN links) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.css">
 <script src="https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect-AutoComplete@master/app/public/multiselect.js"></script>
 ```
