@@ -19,7 +19,7 @@
 ```
 <!-- Multi Select AutoComplete CSS and  JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.css">
-<script src="https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect@master/app/public/multiselect.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/matt212/Custom-Multiselect-AutoComplete@master/app/public/multiselect.js"></script>
 ```
 
 -  `Example:- Jsfiddle ` [Multiselect Filter JSfiddle](https://jsfiddle.net/bilbobaggins/bvu2wanq/)
