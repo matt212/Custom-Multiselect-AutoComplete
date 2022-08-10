@@ -15,6 +15,19 @@
             multiselect.baseInit({ id: 'cltrl_filter_gender', fieldname: 'gender' })
             multiselect.baseInit({ id: 'cltrl_filter_first_name', fieldname: 'first_name' })
 
+            //   for edit use case scenario assign value 
+
+            multiselect.multiSelectpopulate({
+                rows: [{
+                    first_name: "mark"
+                }, {
+                    first_name: "jacob"
+                }]
+                , fieldname: 'first_name'
+                , id: 'cltrl_filter_first_name'
+            })
+
+
         })
 
         // /*basefunction can be anything */ 
@@ -27,6 +40,7 @@
         //     })
         // }
         let cltrl_filter_gender = function (a) {
+            console.log(a)
             /*me.remotefunc is important since it is used in mutliselect call and rendering*/
             me.remotefunc = function (base) {
                 return new Promise(function (resolve, reject) {
@@ -69,7 +83,9 @@
     <h5>Type `m` or `f` </h5>
 
     <input type="text" style="width:45%;" class="form-control" id="cltrl_filter_gender" placeholder="gender">
-
+<br>
+<br>
+<h5>use case wherein one has to set/assign values to control</h5>
     <input type="text" style="width:45%;" class="form-control" id="cltrl_filter_first_name" placeholder="first_name">
 
 </body>

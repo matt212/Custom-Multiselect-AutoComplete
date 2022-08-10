@@ -6,23 +6,40 @@
 /*multiselect filter params */
 let me = {}
 let basesearchar = new Array()
-        let filterparam = {};
-        let basesearchobj = {}
-        let base = {}
+let filterparam = {};
+let basesearchobj = {}
+let base = {}
 let multiselect = {
-  baseInit:function(a)
-  {
-    
-    $(`[id="${a.id}"]`).attr("data-multipleselect-autocomplete-key",a.fieldname)
-    $(`[id="${a.id}"]`).attr("data-multipleselect-autocomplete",a.fieldname)
-    $(`[id="${a.id}"]`).attr("oninput",`${a.id}(this)`)
+  baseInit: function (a) {
+
+    $(`[id="${a.id}"]`).attr("data-multipleselect-autocomplete-key", a.fieldname)
+    $(`[id="${a.id}"]`).attr("data-multipleselect-autocomplete", a.fieldname)
+    $(`[id="${a.id}"]`).attr("oninput", `${a.id}(this)`)
     me.remotefunc = a.id
   },
-   basemultiselect: function(remotefunc) {
-    
-    
+  basemultiselect: function (remotefunc) {
+
+
     me.remotefunc = remotefunc
+
+  },
+  multiSelectpopulate: function (h) {
     
+    this.appendautopopulate(document.getElementById(h.id), h.fieldname)
+    h.rows.forEach(a => this.onsearchtext(Object.keys(a).toString(),Object.values(a).toString(),Object.values(a).toString()));
+    
+
+
+  },
+  transformJSObj: function (a) {
+    let keys = [...new Set(a.map(
+      value => Object.keys(value).toString()
+    ))].toString()
+    // console.log(keys)                  
+    let keysval = [...new Set(a.map(
+      value => Object.values(value).toString()
+    ))]
+    return [{ [keys]: keysval }]
   },
   searchbarautocomplete: function (baseobj) {
     let internobj = {}
@@ -66,8 +83,8 @@ let multiselect = {
     var internbasesearchar = basesearchar;
 
     me.remotefunc(base)
-    // basefunction()
-    //   .getpaginatesearchtypegroupby(base)
+      // basefunction()
+      //   .getpaginatesearchtypegroupby(base)
       .then(function (argument) {
         /*    $("#dv_" + baseobj.position + "").html("");
                    $("#dv_" + baseobj.position + "").show();*/
@@ -278,5 +295,5 @@ let multiselect = {
     // }
     basesearchar = basesearchar.filter(value => Object.keys(value).length !== 0)
   }
-  
+
 }

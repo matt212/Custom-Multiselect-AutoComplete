@@ -52,6 +52,19 @@ let cltrl_filter_gender = function (a) {
         }
 ```
 
+#### for EDIT use case wherein one has set /assign value to control ###
+
+```
+multiselect.multiSelectpopulate({
+                rows: [{
+                    first_name: "mark"
+                }, {
+                    first_name: "jacob"
+                }]
+                , fieldname: 'first_name'
+                , id: 'cltrl_filter_first_name'
+            })
+```
 
 ### sample integration ### 
 #### install ####
