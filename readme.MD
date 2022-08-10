@@ -14,7 +14,7 @@
 <!--pre-Requisites end Here -->
 ```
 
-### multiselect plugin usage ###
+### multiselect plugin usage (CDN links) ###
 
 ```
 <!-- Multi Select AutoComplete CSS and  JS (CDN links) -->
